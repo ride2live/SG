@@ -1,0 +1,826 @@
+com.fallen.streamgetter.AsyncLoad -> com.fallen.streamgetter.a:
+    java.lang.String stringUrl -> a
+    com.fallen.streamgetter.AsyncLoadProgress alp -> b
+    com.fallen.streamgetter.CallBackToServer cbts -> c
+    int bufferMax -> d
+    boolean saveCurrent -> e
+    boolean metaIntFail -> H
+    boolean isBuffered -> f
+    boolean redirectNeed -> g
+    java.lang.String currentStation -> h
+    int maxSaveCount -> I
+    int filesEnum -> J
+    java.lang.String packageName -> i
+    android.content.Context mContext -> j
+    android.content.ContentResolver mContentResolver -> k
+    boolean cutTracks -> l
+    java.net.Socket client -> m
+    java.io.OutputStream out -> n
+    java.io.FileOutputStream tempOut -> o
+    java.net.ServerSocket serverSocket -> K
+    java.io.InputStream is -> p
+    com.fallen.streamgetter.StatusObj lastStatObj -> q
+    java.io.FileOutputStream f -> r
+    int newCode -> s
+    boolean needOpenSocket -> t
+    boolean newActionRecieved -> u
+    boolean canceled -> v
+    boolean recording -> w
+    boolean playing -> x
+    boolean wasConnected -> y
+    java.lang.String cancelMessage -> z
+    java.lang.String errorMessage -> A
+    java.lang.String connecting -> B
+    java.lang.String lowSpace -> C
+    java.lang.String play -> D
+    java.lang.String rec -> E
+    java.lang.String pr -> F
+    java.lang.String noTitle -> G
+    java.lang.String limitExceed -> L
+    boolean fileLimitReached -> M
+    java.lang.String tempOutputFilename -> N
+    void setAlp(com.fallen.streamgetter.AsyncLoadProgress) -> a
+    com.fallen.streamgetter.StatusObj doInBackground(java.lang.Boolean[]) -> a
+    com.fallen.streamgetter.StatusObj setStatusToFailed(com.fallen.streamgetter.StatusObj) -> b
+    com.fallen.streamgetter.StatusObj setStatusToCanceled(com.fallen.streamgetter.StatusObj) -> c
+    void closeSocketServer() -> b
+    void closeTempOutPut() -> c
+    java.lang.String createOutputFileByTitle(java.lang.String) -> a
+    void closeAllStreams() -> d
+    void startSocket() -> e
+    java.lang.String getBitRate(java.net.URLConnection) -> a
+    void createFolders() -> f
+    int getMetInt(java.net.URLConnection) -> b
+    java.lang.String getStationURL(java.net.URLConnection) -> c
+    java.net.HttpURLConnection getUrlConnection(java.net.URL) -> a
+    java.lang.String fixTitle(java.lang.String) -> b
+    void onProgressUpdate(com.fallen.streamgetter.StatusObj[]) -> a
+    void onPostExecute(com.fallen.streamgetter.StatusObj) -> a
+    void deleteFile(java.lang.String) -> c
+    boolean isFreeSpaceEnought() -> g
+    void mpBuffered() -> a
+    void setCurrentSave(boolean) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+    void onProgressUpdate(java.lang.Object[]) -> onProgressUpdate
+    java.net.ServerSocket access$3(com.fallen.streamgetter.AsyncLoad) -> a
+    void access$4(com.fallen.streamgetter.AsyncLoad,java.lang.Object[]) -> a
+com.fallen.streamgetter.AsyncLoad$1 -> com.fallen.streamgetter.b:
+    com.fallen.streamgetter.AsyncLoad this$0 -> a
+    void run() -> run
+com.fallen.streamgetter.AsyncLoad$2 -> com.fallen.streamgetter.c:
+    com.fallen.streamgetter.AsyncLoad this$0 -> a
+    void run() -> run
+com.fallen.streamgetter.AsyncLoadProgress -> com.fallen.streamgetter.d:
+    void onBufferingStart() -> a
+    void onBufferingEnd() -> b
+    void onReconnectStart(int) -> a
+    void onProgressUpdate(com.fallen.streamgetter.StatusObj) -> a
+    void onChangeToggles() -> c
+com.fallen.streamgetter.AsyncMoveFiles -> com.fallen.streamgetter.e:
+    com.fallen.streamgetter.CallBackFilesCopy cbfc -> a
+    java.lang.Void doInBackground(java.io.File[][]) -> a
+    void onPostExecute(java.lang.Void) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+com.fallen.streamgetter.AsyncUpdateStations -> com.fallen.streamgetter.f:
+    com.fallen.streamgetter.CallBAckUpdateStations cbus -> a
+    android.database.sqlite.SQLiteDatabase db -> b
+    int vers -> c
+    android.content.ContentValues doInBackground(java.lang.String[]) -> a
+    boolean downloadStationList(java.lang.String) -> a
+    void onPostExecute(android.content.ContentValues) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+com.fallen.streamgetter.CallBAckUpdateStations -> com.fallen.streamgetter.g:
+    void onUpdateStationBase(java.lang.Integer,int) -> a
+com.fallen.streamgetter.CallBackBroadcast -> com.fallen.streamgetter.h:
+    void onIncomingCall() -> a
+    void onHangOff() -> b
+com.fallen.streamgetter.CallBackFilesCopy -> com.fallen.streamgetter.i:
+    void onMoveComplete() -> a
+com.fallen.streamgetter.CallBackListView -> com.fallen.streamgetter.j:
+    void onDelete(int) -> a
+com.fallen.streamgetter.CallBackMediaBroadcast -> com.fallen.streamgetter.k:
+    void nextPressed() -> c
+    void prevPressed() -> d
+com.fallen.streamgetter.CallBackPlayer -> com.fallen.streamgetter.l:
+    void onStartPlayNewFile(int,java.lang.String) -> a
+    void onProgressUpdate(int) -> b
+com.fallen.streamgetter.CallBackStationListView -> com.fallen.streamgetter.m:
+    void onDeleteStation(java.lang.String) -> a
+com.fallen.streamgetter.CallBackToServer -> com.fallen.streamgetter.n:
+    void onAnyFail(com.fallen.streamgetter.StatusObj) -> a
+    void onCanceled(com.fallen.streamgetter.StatusObj) -> b
+    void onAnyRecording() -> c
+    void onConnected() -> d
+    void socketCreated() -> e
+    void playTemp(java.lang.String) -> a
+    void onSocketClosed() -> f
+    void onFileRecorded(java.lang.String) -> b
+    void onLimitExceed() -> g
+com.fallen.streamgetter.CallBackUnplug -> com.fallen.streamgetter.o:
+    void headset_unplug() -> e
+com.fallen.streamgetter.CallReceiver -> com.fallen.streamgetter.CallReceiver:
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+com.fallen.streamgetter.FromBroadcastBroadcast -> com.fallen.streamgetter.p:
+    com.fallen.streamgetter.CallBackBroadcast cbb -> a
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+com.fallen.streamgetter.GalleryAdapter -> com.fallen.streamgetter.q:
+    android.content.Context context -> a
+    java.util.ArrayList stations -> b
+    boolean showEdit -> c
+    com.fallen.streamgetter.CallBackStationListView cbslv -> d
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+com.fallen.streamgetter.GalleryAdapter$1 -> com.fallen.streamgetter.r:
+    com.fallen.streamgetter.GalleryAdapter this$0 -> a
+    android.widget.TextView val$text -> b
+    android.widget.ImageView val$delImage -> c
+    java.lang.String val$station -> d
+    void onClick(android.view.View) -> onClick
+com.fallen.streamgetter.GetRadioActivity -> com.fallen.streamgetter.GetRadioActivity:
+    android.database.sqlite.SQLiteDatabase db -> r
+    android.widget.TextView currentRadio -> s
+    java.util.ArrayList genres -> t
+    java.util.ArrayList stations -> u
+    float width -> a
+    android.app.AlertDialog newStreamBuilder -> b
+    com.fallen.streamgetter.MainService mainService -> v
+    android.widget.TextView curStatus -> w
+    android.widget.TextView curTitle -> x
+    android.widget.TextView bitRate -> y
+    android.widget.TextView saveTo -> z
+    android.widget.TextView stationSite -> A
+    android.widget.TextView kbText -> B
+    android.widget.EditText newUrlStation -> C
+    android.widget.EditText newNameStation -> D
+    android.widget.ImageView trackImage -> E
+    android.widget.Gallery gallery -> F
+    java.lang.String selectedGenre -> G
+    java.lang.String selectedRadio -> H
+    boolean binded -> I
+    android.widget.LinearLayout optionsLayout -> c
+    android.widget.SeekBar volumeBar -> d
+    android.os.Handler handler -> J
+    java.lang.Runnable runnable -> K
+    android.app.AlertDialog dialog -> e
+    android.content.res.Resources res -> f
+    android.widget.LinearLayout topBar -> g
+    android.widget.LinearLayout statusLayout -> h
+    android.widget.ProgressBar loadingBar -> i
+    float xDown -> j
+    float yDown -> k
+    float xUp -> l
+    float yUp -> m
+    android.app.AlertDialog piratDialog -> n
+    android.widget.RelativeLayout bigLayout -> L
+    int height -> M
+    android.media.AudioManager audioManager -> N
+    android.widget.ImageButton favButton -> o
+    android.widget.ImageView pointer -> p
+    android.widget.LinearLayout functionLayout -> q
+    int recCount -> O
+    android.widget.CheckBox cutByTrackBox -> P
+    android.widget.CheckBox loadImagesBox -> Q
+    android.widget.CheckBox showTopButtons -> R
+    android.widget.ImageButton saveCurrentSong -> S
+    android.widget.ImageButton playBack -> T
+    android.widget.ImageButton saveAll -> U
+    android.widget.LinearLayout helpButtonsLayout -> V
+    android.widget.LinearLayout statusField -> W
+    android.widget.RelativeLayout progressLayout -> X
+    boolean blinking -> Y
+    boolean checkingSize -> Z
+    android.content.ServiceConnection servCon -> aa
+    boolean isDebuggable -> ab
+    boolean updating -> ac
+    boolean stopCheckingFile -> ad
+    java.lang.String fileToCheck -> ae
+    void onCreate(android.os.Bundle) -> onCreate
+    void setActionListeners() -> i
+    void saveAllToggleChanged() -> j
+    void playBackToggleChanged() -> k
+    void savedToggleChanged() -> l
+    void connect(android.view.View) -> connect
+    void constructPiratedialog() -> m
+    void showHelpGUI(boolean) -> a
+    void pointerDown() -> n
+    void pointerUp() -> o
+    void pointerUpAgain() -> p
+    void pointerDownAgain() -> q
+    void pointerOptions() -> r
+    void pointerOptionsBack() -> s
+    void pointerRecActivity() -> t
+    void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
+    void setOptionMosions() -> u
+    void slide(int) -> b
+    void hideStatusLayout() -> v
+    void showOptionsLayout() -> w
+    void hideOptionsLayout() -> x
+    void startPlayerActivity(boolean) -> b
+    void hideTopBar() -> y
+    void showTopBar() -> d
+    void openRadioList(java.lang.String) -> b
+    void constructStationArray(java.lang.String) -> d
+    void noStationCase() -> e
+    void onStart() -> onStart
+    void onResume() -> onResume
+    void setHelpButtonsVisibility() -> z
+    java.lang.String getRandomStaton() -> A
+    void onPause() -> onPause
+    void onStop() -> onStop
+    void onDestroy() -> onDestroy
+    void notifyAboutInterface(com.fallen.streamgetter.AsyncLoad) -> a
+    void setStatusToGUI(com.fallen.streamgetter.StatusObj) -> b
+    void showPirateDialog() -> B
+    void notifyServerAboutInterface() -> f
+    void sendActionToService() -> g
+    java.lang.String getUrlBySelected(java.lang.String) -> c
+    void getGenres() -> C
+    void loadImage(java.lang.String) -> e
+    void stop(android.view.View) -> stop
+    void play(android.view.View) -> play
+    void play_rec(android.view.View) -> play_rec
+    void rec(android.view.View) -> rec
+    void onImageLoaded(android.graphics.Bitmap,java.lang.String) -> a
+    void setLongClickListeners() -> D
+    void updateLib(android.view.View) -> updateLib
+    void onBackPressed() -> onBackPressed
+    void addToFav(android.view.View) -> addToFav
+    void onDeleteStation(java.lang.String) -> a
+    void setSaveCount(android.view.View) -> setSaveCount
+    void rateMe(android.view.View) -> rateMe
+    void buy(android.view.View) -> buy
+    void onProgressUpdate(com.fallen.streamgetter.StatusObj) -> a
+    void showStatusLayoutParams(boolean) -> c
+    void removeAutohide() -> E
+    void setVolumeProgress() -> F
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+    void showDemoAgain(android.view.View) -> showDemoAgain
+    void onUpdateStationBase(java.lang.Integer,int) -> a
+    void fillByContent() -> G
+    void createDBFromAssets(java.lang.String) -> f
+    void checkDBOpen() -> H
+    java.lang.String detectLocale() -> I
+    void updateStationDB() -> J
+    void topClicked(android.view.View) -> topClicked
+    void statusClicked(android.view.View) -> statusClicked
+    void tracksClicked(android.view.View) -> tracksClicked
+    void optionsClicked(android.view.View) -> optionsClicked
+    void onBufferingStart() -> a
+    void onBufferingEnd() -> b
+    void onReconnectStart(int) -> a
+    void onChangeToggles() -> c
+    void startBlink() -> K
+    void forward(android.view.View) -> forward
+    void backward(android.view.View) -> backward
+    void startCheckFileSize() -> L
+    void checkSize() -> h
+    void alreadyRecToast() -> M
+    void addStation(android.view.View) -> addStation
+    void addConfirm(android.view.View) -> addConfirm
+    void access$0(com.fallen.streamgetter.GetRadioActivity,com.fallen.streamgetter.MainService) -> a
+    com.fallen.streamgetter.MainService access$1(com.fallen.streamgetter.GetRadioActivity) -> a
+    java.util.ArrayList access$2(com.fallen.streamgetter.GetRadioActivity) -> b
+    void access$3(com.fallen.streamgetter.GetRadioActivity,java.lang.String) -> a
+    java.lang.String access$4(com.fallen.streamgetter.GetRadioActivity) -> c
+    void access$5(com.fallen.streamgetter.GetRadioActivity) -> d
+    android.media.AudioManager access$6(com.fallen.streamgetter.GetRadioActivity) -> e
+    android.os.Handler access$7(com.fallen.streamgetter.GetRadioActivity) -> f
+    java.lang.Runnable access$8(com.fallen.streamgetter.GetRadioActivity) -> g
+    void access$9(com.fallen.streamgetter.GetRadioActivity) -> h
+    void access$10(com.fallen.streamgetter.GetRadioActivity) -> i
+    android.widget.TextView access$11(com.fallen.streamgetter.GetRadioActivity) -> j
+    void access$12(com.fallen.streamgetter.GetRadioActivity) -> k
+    void access$13(com.fallen.streamgetter.GetRadioActivity) -> l
+    void access$14(com.fallen.streamgetter.GetRadioActivity) -> m
+    void access$15(com.fallen.streamgetter.GetRadioActivity) -> n
+    void access$16(com.fallen.streamgetter.GetRadioActivity) -> o
+    void access$17(com.fallen.streamgetter.GetRadioActivity) -> p
+    void access$18(com.fallen.streamgetter.GetRadioActivity,boolean) -> a
+    void access$19(com.fallen.streamgetter.GetRadioActivity) -> q
+    void access$20(com.fallen.streamgetter.GetRadioActivity) -> r
+    void access$21(com.fallen.streamgetter.GetRadioActivity) -> s
+    void access$22(com.fallen.streamgetter.GetRadioActivity) -> t
+    void access$23(com.fallen.streamgetter.GetRadioActivity) -> u
+    void access$24(com.fallen.streamgetter.GetRadioActivity) -> v
+    void access$25(com.fallen.streamgetter.GetRadioActivity) -> w
+    void access$26(com.fallen.streamgetter.GetRadioActivity,boolean) -> b
+    android.widget.Gallery access$27(com.fallen.streamgetter.GetRadioActivity) -> x
+    java.util.ArrayList access$28(com.fallen.streamgetter.GetRadioActivity) -> y
+    void access$29(com.fallen.streamgetter.GetRadioActivity,java.lang.String) -> b
+    android.widget.TextView access$30(com.fallen.streamgetter.GetRadioActivity) -> z
+    java.lang.String access$31(com.fallen.streamgetter.GetRadioActivity) -> A
+    void access$32(com.fallen.streamgetter.GetRadioActivity,boolean) -> c
+    boolean access$33(com.fallen.streamgetter.GetRadioActivity) -> B
+    void access$34(com.fallen.streamgetter.GetRadioActivity,boolean) -> d
+    android.widget.RelativeLayout access$35(com.fallen.streamgetter.GetRadioActivity) -> C
+com.fallen.streamgetter.GetRadioActivity$1 -> com.fallen.streamgetter.s:
+    com.fallen.streamgetter.GetRadioActivity this$0 -> a
+    void onServiceConnected(android.content.ComponentName,android.os.IBinder) -> onServiceConnected
+    void onServiceDisconnected(android.content.ComponentName) -> onServiceDisconnected
+com.fallen.streamgetter.GetRadioActivity$10 -> com.fallen.streamgetter.t:
+    com.fallen.streamgetter.GetRadioActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.fallen.streamgetter.GetRadioActivity$11 -> com.fallen.streamgetter.u:
+    com.fallen.streamgetter.GetRadioActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.fallen.streamgetter.GetRadioActivity$12 -> com.fallen.streamgetter.v:
+    com.fallen.streamgetter.GetRadioActivity this$0 -> a
+    boolean val$realyFirst -> b
+    void onCancel(android.content.DialogInterface) -> onCancel
+com.fallen.streamgetter.GetRadioActivity$15 -> com.fallen.streamgetter.w:
+    com.fallen.streamgetter.GetRadioActivity this$0 -> a
+    void onAnimationStart(android.view.animation.Animation) -> onAnimationStart
+    void onAnimationRepeat(android.view.animation.Animation) -> onAnimationRepeat
+    void onAnimationEnd(android.view.animation.Animation) -> onAnimationEnd
+    com.fallen.streamgetter.GetRadioActivity access$0(com.fallen.streamgetter.GetRadioActivity$15) -> a
+com.fallen.streamgetter.GetRadioActivity$15$1 -> com.fallen.streamgetter.x:
+    com.fallen.streamgetter.GetRadioActivity$15 this$1 -> a
+    void run() -> run
+com.fallen.streamgetter.GetRadioActivity$16 -> com.fallen.streamgetter.y:
+    com.fallen.streamgetter.GetRadioActivity this$0 -> a
+    void onAnimationStart(android.view.animation.Animation) -> onAnimationStart
+    void onAnimationRepeat(android.view.animation.Animation) -> onAnimationRepeat
+    void onAnimationEnd(android.view.animation.Animation) -> onAnimationEnd
+    com.fallen.streamgetter.GetRadioActivity access$0(com.fallen.streamgetter.GetRadioActivity$16) -> a
+com.fallen.streamgetter.GetRadioActivity$16$1 -> com.fallen.streamgetter.z:
+    com.fallen.streamgetter.GetRadioActivity$16 this$1 -> a
+    void run() -> run
+com.fallen.streamgetter.GetRadioActivity$17 -> com.fallen.streamgetter.aa:
+    com.fallen.streamgetter.GetRadioActivity this$0 -> a
+    void onAnimationStart(android.view.animation.Animation) -> onAnimationStart
+    void onAnimationRepeat(android.view.animation.Animation) -> onAnimationRepeat
+    void onAnimationEnd(android.view.animation.Animation) -> onAnimationEnd
+    com.fallen.streamgetter.GetRadioActivity access$0(com.fallen.streamgetter.GetRadioActivity$17) -> a
+com.fallen.streamgetter.GetRadioActivity$17$1 -> com.fallen.streamgetter.ab:
+    com.fallen.streamgetter.GetRadioActivity$17 this$1 -> a
+    void run() -> run
+com.fallen.streamgetter.GetRadioActivity$18 -> com.fallen.streamgetter.ac:
+    com.fallen.streamgetter.GetRadioActivity this$0 -> a
+    void onAnimationStart(android.view.animation.Animation) -> onAnimationStart
+    void onAnimationRepeat(android.view.animation.Animation) -> onAnimationRepeat
+    void onAnimationEnd(android.view.animation.Animation) -> onAnimationEnd
+    com.fallen.streamgetter.GetRadioActivity access$0(com.fallen.streamgetter.GetRadioActivity$18) -> a
+com.fallen.streamgetter.GetRadioActivity$18$1 -> com.fallen.streamgetter.ad:
+    com.fallen.streamgetter.GetRadioActivity$18 this$1 -> a
+    void run() -> run
+com.fallen.streamgetter.GetRadioActivity$19 -> com.fallen.streamgetter.ae:
+    com.fallen.streamgetter.GetRadioActivity this$0 -> a
+    void onAnimationStart(android.view.animation.Animation) -> onAnimationStart
+    void onAnimationRepeat(android.view.animation.Animation) -> onAnimationRepeat
+    void onAnimationEnd(android.view.animation.Animation) -> onAnimationEnd
+    com.fallen.streamgetter.GetRadioActivity access$0(com.fallen.streamgetter.GetRadioActivity$19) -> a
+com.fallen.streamgetter.GetRadioActivity$19$1 -> com.fallen.streamgetter.af:
+    com.fallen.streamgetter.GetRadioActivity$19 this$1 -> a
+    void run() -> run
+com.fallen.streamgetter.GetRadioActivity$2 -> com.fallen.streamgetter.ag:
+    com.fallen.streamgetter.GetRadioActivity this$0 -> a
+    void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
+com.fallen.streamgetter.GetRadioActivity$20 -> com.fallen.streamgetter.ah:
+    com.fallen.streamgetter.GetRadioActivity this$0 -> a
+    void onAnimationStart(android.view.animation.Animation) -> onAnimationStart
+    void onAnimationRepeat(android.view.animation.Animation) -> onAnimationRepeat
+    void onAnimationEnd(android.view.animation.Animation) -> onAnimationEnd
+    com.fallen.streamgetter.GetRadioActivity access$0(com.fallen.streamgetter.GetRadioActivity$20) -> a
+com.fallen.streamgetter.GetRadioActivity$20$1 -> com.fallen.streamgetter.ai:
+    com.fallen.streamgetter.GetRadioActivity$20 this$1 -> a
+    void run() -> run
+com.fallen.streamgetter.GetRadioActivity$21 -> com.fallen.streamgetter.aj:
+    com.fallen.streamgetter.GetRadioActivity this$0 -> a
+    void onAnimationStart(android.view.animation.Animation) -> onAnimationStart
+    void onAnimationRepeat(android.view.animation.Animation) -> onAnimationRepeat
+    void onAnimationEnd(android.view.animation.Animation) -> onAnimationEnd
+com.fallen.streamgetter.GetRadioActivity$22 -> com.fallen.streamgetter.ak:
+    com.fallen.streamgetter.GetRadioActivity this$0 -> a
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+com.fallen.streamgetter.GetRadioActivity$23 -> com.fallen.streamgetter.al:
+    com.fallen.streamgetter.GetRadioActivity this$0 -> a
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+com.fallen.streamgetter.GetRadioActivity$24 -> com.fallen.streamgetter.am:
+    com.fallen.streamgetter.GetRadioActivity this$0 -> a
+    void onAnimationStart(android.view.animation.Animation) -> onAnimationStart
+    void onAnimationRepeat(android.view.animation.Animation) -> onAnimationRepeat
+    void onAnimationEnd(android.view.animation.Animation) -> onAnimationEnd
+com.fallen.streamgetter.GetRadioActivity$25 -> com.fallen.streamgetter.an:
+    com.fallen.streamgetter.GetRadioActivity this$0 -> a
+    void onAnimationStart(android.view.animation.Animation) -> onAnimationStart
+    void onAnimationRepeat(android.view.animation.Animation) -> onAnimationRepeat
+    void onAnimationEnd(android.view.animation.Animation) -> onAnimationEnd
+com.fallen.streamgetter.GetRadioActivity$26 -> com.fallen.streamgetter.ao:
+    com.fallen.streamgetter.GetRadioActivity this$0 -> a
+    void onAnimationStart(android.view.animation.Animation) -> onAnimationStart
+    void onAnimationRepeat(android.view.animation.Animation) -> onAnimationRepeat
+    void onAnimationEnd(android.view.animation.Animation) -> onAnimationEnd
+com.fallen.streamgetter.GetRadioActivity$27 -> com.fallen.streamgetter.ap:
+    com.fallen.streamgetter.GetRadioActivity this$0 -> a
+    void onAnimationStart(android.view.animation.Animation) -> onAnimationStart
+    void onAnimationRepeat(android.view.animation.Animation) -> onAnimationRepeat
+    void onAnimationEnd(android.view.animation.Animation) -> onAnimationEnd
+com.fallen.streamgetter.GetRadioActivity$28 -> com.fallen.streamgetter.aq:
+    com.fallen.streamgetter.GetRadioActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.fallen.streamgetter.GetRadioActivity$29 -> com.fallen.streamgetter.ar:
+    com.fallen.streamgetter.GetRadioActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.fallen.streamgetter.GetRadioActivity$3 -> com.fallen.streamgetter.as:
+    com.fallen.streamgetter.GetRadioActivity this$0 -> a
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+com.fallen.streamgetter.GetRadioActivity$30 -> com.fallen.streamgetter.at:
+    com.fallen.streamgetter.GetRadioActivity this$0 -> a
+    android.widget.TextView val$title -> b
+    java.lang.String val$titleDialog -> c
+    void onStopTrackingTouch(android.widget.SeekBar) -> onStopTrackingTouch
+    void onStartTrackingTouch(android.widget.SeekBar) -> onStartTrackingTouch
+    void onProgressChanged(android.widget.SeekBar,int,boolean) -> onProgressChanged
+com.fallen.streamgetter.GetRadioActivity$31 -> com.fallen.streamgetter.au:
+    com.fallen.streamgetter.GetRadioActivity this$0 -> a
+    android.widget.SeekBar val$sk -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.fallen.streamgetter.GetRadioActivity$32 -> com.fallen.streamgetter.av:
+    com.fallen.streamgetter.GetRadioActivity this$0 -> a
+    void run() -> run
+com.fallen.streamgetter.GetRadioActivity$33 -> com.fallen.streamgetter.aw:
+    com.fallen.streamgetter.GetRadioActivity this$0 -> a
+    void run() -> run
+com.fallen.streamgetter.GetRadioActivity$34 -> com.fallen.streamgetter.ax:
+    com.fallen.streamgetter.GetRadioActivity this$0 -> a
+    void run() -> run
+com.fallen.streamgetter.GetRadioActivity$4 -> com.fallen.streamgetter.ay:
+    com.fallen.streamgetter.GetRadioActivity this$0 -> a
+    void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
+com.fallen.streamgetter.GetRadioActivity$5 -> com.fallen.streamgetter.az:
+    com.fallen.streamgetter.GetRadioActivity this$0 -> a
+    void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
+com.fallen.streamgetter.GetRadioActivity$6 -> com.fallen.streamgetter.ba:
+    com.fallen.streamgetter.GetRadioActivity this$0 -> a
+    void onStopTrackingTouch(android.widget.SeekBar) -> onStopTrackingTouch
+    void onStartTrackingTouch(android.widget.SeekBar) -> onStartTrackingTouch
+    void onProgressChanged(android.widget.SeekBar,int,boolean) -> onProgressChanged
+com.fallen.streamgetter.GetRadioActivity$7 -> com.fallen.streamgetter.bb:
+    com.fallen.streamgetter.GetRadioActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.fallen.streamgetter.GetRadioActivity$8 -> com.fallen.streamgetter.bc:
+    com.fallen.streamgetter.GetRadioActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.fallen.streamgetter.GetRadioActivity$9 -> com.fallen.streamgetter.bd:
+    com.fallen.streamgetter.GetRadioActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.fallen.streamgetter.HeadSetUnplugReceiver -> com.fallen.streamgetter.be:
+    com.fallen.streamgetter.CallBackUnplug cbu -> a
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+com.fallen.streamgetter.ImageLoadAsyncTask -> com.fallen.streamgetter.bf:
+    com.fallen.streamgetter.LoadImageResult lir -> a
+    java.lang.String title -> b
+    com.fallen.streamgetter.XMLLastFMHandler xmlHandler -> c
+    java.lang.String API -> d
+    java.lang.String METHOD -> e
+    java.lang.String METHOD_RESERVE -> f
+    android.graphics.Bitmap doInBackground(java.lang.String[]) -> a
+    void startRequest(java.lang.String) -> a
+    void onPostExecute(android.graphics.Bitmap) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+com.fallen.streamgetter.ListFilesAdapter -> com.fallen.streamgetter.bg:
+    android.content.Context context -> a
+    java.io.File[] fileList -> b
+    com.fallen.streamgetter.CallBackListView cblv -> c
+    float xDown -> d
+    float xUp -> e
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+com.fallen.streamgetter.ListFilesAdapter$1 -> com.fallen.streamgetter.bh:
+    com.fallen.streamgetter.ListFilesAdapter this$0 -> a
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+com.fallen.streamgetter.ListFilesAdapter$2 -> com.fallen.streamgetter.bi:
+    com.fallen.streamgetter.ListFilesAdapter this$0 -> a
+    int val$position -> b
+    void onClick(android.view.View) -> onClick
+com.fallen.streamgetter.ListGenresAdapter -> com.fallen.streamgetter.bj:
+    android.content.Context context -> a
+    java.util.ArrayList genres -> b
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+com.fallen.streamgetter.LoadImageResult -> com.fallen.streamgetter.bk:
+    void onImageLoaded(android.graphics.Bitmap,java.lang.String) -> a
+com.fallen.streamgetter.MainService -> com.fallen.streamgetter.MainService:
+    android.os.IBinder mBinder -> i
+    boolean crying -> a
+    com.fallen.streamgetter.AsyncLoad asyncLoad -> b
+    android.media.MediaPlayer mpMainServ -> j
+    java.lang.String urlBySelected -> c
+    android.os.Handler handler -> k
+    com.fallen.streamgetter.FromBroadcastBroadcast fbb -> l
+    int reconnectMax -> m
+    int reconnectTimeOut -> n
+    int reconnectTimes -> o
+    com.fallen.streamgetter.AsyncLoadProgress aslp -> d
+    java.lang.Runnable runnable -> p
+    boolean telephoneActionHappened -> q
+    com.fallen.streamgetter.StatusObj lastStatusObject -> e
+    android.media.MediaPlayer secondMp -> r
+    boolean mpPrepared -> s
+    int secondMpStartPosition -> t
+    boolean stopIsCalled -> u
+    boolean needToStartAnotherAsync -> v
+    boolean recording -> f
+    boolean playing -> g
+    boolean isTheSameUrl -> w
+    android.net.wifi.WifiManager$WifiLock wifiLock -> h
+    android.os.IBinder onBind(android.content.Intent) -> onBind
+    void onCreate() -> onCreate
+    void go(java.lang.String) -> c
+    void removeReconnect() -> l
+    void startNewAsync() -> m
+    void releaseAsyncLoad() -> n
+    void releaseMP() -> o
+    void releaseSecondMP() -> p
+    int onStartCommand(android.content.Intent,int,int) -> onStartCommand
+    void onLowMemory() -> onLowMemory
+    void onDestroy() -> onDestroy
+    void onAnyFail(com.fallen.streamgetter.StatusObj) -> a
+    void turnOffToggles() -> q
+    void startReconnect() -> r
+    void onCanceled(com.fallen.streamgetter.StatusObj) -> b
+    boolean onUnbind(android.content.Intent) -> onUnbind
+    com.fallen.streamgetter.AsyncLoad getAsyncObject() -> h
+    void onIncomingCall() -> a
+    void onHangOff() -> b
+    void onAnyRecording() -> c
+    void activityBindOrStopNotify(com.fallen.streamgetter.AsyncLoadProgress) -> a
+    void onConnected() -> d
+    void socketCreated() -> e
+    void playTemp(java.lang.String) -> a
+    void onSocketClosed() -> f
+    boolean getNextCommandAlreadyRecieved() -> i
+    void onFileRecorded(java.lang.String) -> b
+    void seekForward() -> j
+    void seekBackward() -> k
+    void onLimitExceed() -> g
+    void access$0(com.fallen.streamgetter.MainService) -> a
+    android.media.MediaPlayer access$1(com.fallen.streamgetter.MainService) -> b
+    boolean access$3(com.fallen.streamgetter.MainService) -> c
+    void access$4(com.fallen.streamgetter.MainService) -> d
+    android.media.MediaPlayer access$5(com.fallen.streamgetter.MainService) -> e
+    void access$6(com.fallen.streamgetter.MainService,boolean) -> a
+    void access$7(com.fallen.streamgetter.MainService) -> f
+    void access$8(com.fallen.streamgetter.MainService,int) -> a
+    int access$9(com.fallen.streamgetter.MainService) -> g
+com.fallen.streamgetter.MainService$1 -> com.fallen.streamgetter.bl:
+    com.fallen.streamgetter.MainService this$0 -> a
+    void run() -> run
+com.fallen.streamgetter.MainService$10 -> com.fallen.streamgetter.bm:
+    com.fallen.streamgetter.MainService this$0 -> a
+    java.lang.String val$filePath -> b
+    void onCompletion(android.media.MediaPlayer) -> onCompletion
+com.fallen.streamgetter.MainService$11 -> com.fallen.streamgetter.bn:
+    com.fallen.streamgetter.MainService this$0 -> a
+    void onPrepared(android.media.MediaPlayer) -> onPrepared
+com.fallen.streamgetter.MainService$3 -> com.fallen.streamgetter.bo:
+    com.fallen.streamgetter.MainService this$0 -> a
+    boolean onError(android.media.MediaPlayer,int,int) -> onError
+com.fallen.streamgetter.MainService$4 -> com.fallen.streamgetter.bp:
+    com.fallen.streamgetter.MainService this$0 -> a
+    boolean onError(android.media.MediaPlayer,int,int) -> onError
+com.fallen.streamgetter.MainService$5 -> com.fallen.streamgetter.bq:
+    com.fallen.streamgetter.MainService this$0 -> a
+    boolean onInfo(android.media.MediaPlayer,int,int) -> onInfo
+com.fallen.streamgetter.MainService$6 -> com.fallen.streamgetter.br:
+    com.fallen.streamgetter.MainService this$0 -> a
+    void onBufferingUpdate(android.media.MediaPlayer,int) -> onBufferingUpdate
+com.fallen.streamgetter.MainService$7 -> com.fallen.streamgetter.bs:
+    com.fallen.streamgetter.MainService this$0 -> a
+    void onCompletion(android.media.MediaPlayer) -> onCompletion
+com.fallen.streamgetter.MainService$8 -> com.fallen.streamgetter.bt:
+    com.fallen.streamgetter.MainService this$0 -> a
+    void onPrepared(android.media.MediaPlayer) -> onPrepared
+com.fallen.streamgetter.MainService$9 -> com.fallen.streamgetter.bu:
+    com.fallen.streamgetter.MainService this$0 -> a
+    boolean onError(android.media.MediaPlayer,int,int) -> onError
+com.fallen.streamgetter.MainService$LocalBinder -> com.fallen.streamgetter.bv:
+    com.fallen.streamgetter.MainService this$0 -> a
+    com.fallen.streamgetter.MainService getService() -> a
+com.fallen.streamgetter.MediaButtonsReceiver -> com.fallen.streamgetter.bw:
+    com.fallen.streamgetter.CallBackMediaBroadcast cbmb -> a
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+com.fallen.streamgetter.Parameters -> com.fallen.streamgetter.bx:
+    java.lang.String TEMP -> a
+    java.lang.String SAVE -> b
+    java.lang.String ACCEPTED -> c
+    java.lang.String[] unwantedSymbols -> d
+    int GREEN -> e
+    boolean imageUpdated -> f
+    int[] maxCountArray -> g
+    byte[] SALT -> h
+com.fallen.streamgetter.PlayerService -> com.fallen.streamgetter.PlayerService:
+    android.os.IBinder mBinder -> e
+    android.media.MediaPlayer mpRec -> a
+    int startIndex -> b
+    java.io.File[] files -> c
+    com.fallen.streamgetter.CallBackPlayer cbp -> d
+    boolean blinking -> f
+    com.fallen.streamgetter.FromBroadcastBroadcast fbb -> g
+    com.fallen.streamgetter.MediaButtonsReceiver mbr -> h
+    com.fallen.streamgetter.HeadSetUnplugReceiver hsur -> i
+    android.os.IBinder onBind(android.content.Intent) -> onBind
+    void onIncomingCall() -> a
+    void onHangOff() -> b
+    void stop() -> stop
+    boolean onUnbind(android.content.Intent) -> onUnbind
+    void onDestroy() -> onDestroy
+    void onCreate() -> onCreate
+    void onStart(android.content.Intent,int) -> onStart
+    void play(int) -> a
+    void sendInfoCurrentSong() -> g
+    void seekTo(int) -> b
+    void notifyAboutInterface(com.fallen.streamgetter.CallBackPlayer) -> a
+    void startBlink() -> h
+    void blink() -> f
+    void next() -> next
+    void prev() -> prev
+    void nextPressed() -> c
+    void prevPressed() -> d
+    void headset_unplug() -> e
+com.fallen.streamgetter.PlayerService$1 -> com.fallen.streamgetter.by:
+    com.fallen.streamgetter.PlayerService this$0 -> a
+    void onCompletion(android.media.MediaPlayer) -> onCompletion
+com.fallen.streamgetter.PlayerService$2 -> com.fallen.streamgetter.bz:
+    com.fallen.streamgetter.PlayerService this$0 -> a
+    void run() -> run
+com.fallen.streamgetter.PlayerService$LocalPlayerBinder -> com.fallen.streamgetter.ca:
+    com.fallen.streamgetter.PlayerService this$0 -> a
+    com.fallen.streamgetter.PlayerService getService() -> a
+com.fallen.streamgetter.SGPlayer -> com.fallen.streamgetter.SGPlayer:
+    android.widget.ListView fileListView -> a
+    android.widget.TextView noFiles -> b
+    android.widget.LinearLayout playerLayout -> c
+    android.widget.ImageView pointer -> d
+    float xDown -> e
+    float xUp -> f
+    float yDown -> g
+    float yUp -> h
+    float xDownL -> i
+    float xUpL -> j
+    java.lang.String saveTo -> k
+    boolean canPlay -> l
+    java.io.File[] filesToAccept -> r
+    com.fallen.streamgetter.PlayerService playerService -> m
+    android.widget.SeekBar mediaSeekBar -> n
+    android.widget.TextView titleText -> o
+    android.widget.TextView currentTimeText -> p
+    android.widget.TextView overalTimeText -> q
+    android.content.ServiceConnection servCon -> s
+    boolean tracking -> t
+    void onCreate(android.os.Bundle) -> onCreate
+    void showHelp() -> d
+    void pointerBack() -> b
+    void updateFileList() -> e
+    void constructFileList(java.io.File[]) -> a
+    void onResume() -> onResume
+    void connectToPlayService() -> f
+    void onPause() -> onPause
+    void finishActivityMethod() -> c
+    void onDelete(int) -> a
+    void moveToAccepted(android.view.View) -> moveToAccepted
+    void onMoveComplete() -> a
+    void showAcceptFolderHelp(android.view.View) -> showAcceptFolderHelp
+    void stop(android.view.View) -> stop
+    void sendInterfaceToPlayerService(com.fallen.streamgetter.CallBackPlayer) -> a
+    void onStartPlayNewFile(int,java.lang.String) -> a
+    void onProgressUpdate(int) -> b
+    java.lang.String convertMsecsToReadbleFormat(int) -> c
+    void next(android.view.View) -> next
+    void prev(android.view.View) -> prev
+    void access$0(com.fallen.streamgetter.SGPlayer,boolean) -> a
+    java.lang.String access$1(com.fallen.streamgetter.SGPlayer,int) -> a
+com.fallen.streamgetter.SGPlayer$1 -> com.fallen.streamgetter.cb:
+    com.fallen.streamgetter.SGPlayer this$0 -> a
+    void onServiceDisconnected(android.content.ComponentName) -> onServiceDisconnected
+    void onServiceConnected(android.content.ComponentName,android.os.IBinder) -> onServiceConnected
+com.fallen.streamgetter.SGPlayer$2 -> com.fallen.streamgetter.cc:
+    boolean userMovedSeekBar -> b
+    com.fallen.streamgetter.SGPlayer this$0 -> a
+    void onStopTrackingTouch(android.widget.SeekBar) -> onStopTrackingTouch
+    void onStartTrackingTouch(android.widget.SeekBar) -> onStartTrackingTouch
+    void onProgressChanged(android.widget.SeekBar,int,boolean) -> onProgressChanged
+com.fallen.streamgetter.SGPlayer$3 -> com.fallen.streamgetter.cd:
+    com.fallen.streamgetter.SGPlayer this$0 -> a
+    void run() -> run
+com.fallen.streamgetter.SGPlayer$4 -> com.fallen.streamgetter.ce:
+    com.fallen.streamgetter.SGPlayer this$0 -> a
+    void onAnimationStart(android.view.animation.Animation) -> onAnimationStart
+    void onAnimationRepeat(android.view.animation.Animation) -> onAnimationRepeat
+    void onAnimationEnd(android.view.animation.Animation) -> onAnimationEnd
+    com.fallen.streamgetter.SGPlayer access$0(com.fallen.streamgetter.SGPlayer$4) -> a
+com.fallen.streamgetter.SGPlayer$4$1 -> com.fallen.streamgetter.cf:
+    com.fallen.streamgetter.SGPlayer$4 this$1 -> a
+    void run() -> run
+com.fallen.streamgetter.SGPlayer$5 -> com.fallen.streamgetter.cg:
+    com.fallen.streamgetter.SGPlayer this$0 -> a
+    boolean accept(java.io.File,java.lang.String) -> accept
+com.fallen.streamgetter.SGPlayer$6 -> com.fallen.streamgetter.ch:
+    com.fallen.streamgetter.SGPlayer this$0 -> a
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+com.fallen.streamgetter.SGPlayer$7 -> com.fallen.streamgetter.ci:
+    com.fallen.streamgetter.SGPlayer this$0 -> a
+    java.io.File[] val$files -> b
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+com.fallen.streamgetter.StationBase -> com.fallen.streamgetter.cj:
+    android.content.Context context -> a
+    void onCreate(android.database.sqlite.SQLiteDatabase) -> onCreate
+    void onUpgrade(android.database.sqlite.SQLiteDatabase,int,int) -> onUpgrade
+com.fallen.streamgetter.StatusObj -> com.fallen.streamgetter.ck:
+    int status -> a
+    java.lang.String statusMessage -> b
+    java.lang.String genre -> c
+    java.lang.String bitrate -> d
+    java.lang.String site -> e
+    java.lang.String saveFolder -> f
+    java.lang.String title -> g
+    boolean recording -> h
+    boolean isBuffering -> i
+    int curRecCount -> j
+    int maxCount -> k
+    boolean notLicensed -> l
+    java.lang.String currentFile -> m
+    void setNotLicensed(boolean) -> a
+    void setMaxCount(int) -> a
+    int getCurRecCount() -> a
+    void setCurRecCount(int) -> b
+    boolean isRecording() -> b
+    void setRecording(boolean) -> b
+    int getStatus() -> c
+    void setStatus(int) -> c
+    java.lang.String getStatusMessage() -> d
+    void setStatusMessage(java.lang.String) -> a
+    java.lang.String getBitrate() -> e
+    void setBitrate(java.lang.String) -> b
+    java.lang.String getSite() -> f
+    void setSite(java.lang.String) -> c
+    java.lang.String getSaveFolder() -> g
+    void setSaveFolder(java.lang.String) -> d
+    java.lang.String getTitle() -> h
+    void setTitle(java.lang.String) -> e
+    void setCurrentFile(java.lang.String) -> f
+    java.lang.String getCurrentFile() -> i
+com.fallen.streamgetter.Utils -> com.fallen.streamgetter.cl:
+    int getGenreImage(int) -> a
+    java.lang.String parseArtist(java.lang.String) -> a
+    java.lang.String parseTrack(java.lang.String) -> b
+    byte[] getID3Tags(java.lang.String) -> c
+    byte[] constructAlbumFullTag(java.lang.String) -> d
+    byte[] constructAlbumTagID(int) -> b
+    byte[] constructArtistFullTag(java.lang.String) -> e
+    byte[] constructArtistTagID(int) -> c
+    byte[] constructFullTitleTag(java.lang.String) -> f
+    byte[] constructTitleTagID(int) -> d
+    byte[] constructHeader() -> a
+    java.lang.String getPrevStation(android.content.Context) -> a
+    void setPrevStation(java.lang.String,android.content.Context) -> a
+    int getCurGenre(android.content.Context) -> b
+    void setCurGenre(int,android.content.Context) -> a
+    boolean isFirstLaunch(android.content.Context) -> c
+    void setNotFirstLaunch(android.content.Context) -> d
+    int getMax(android.content.Context) -> e
+    void setMax(int,android.content.Context) -> b
+    int getVersionUpdate(android.content.Context) -> f
+    void setVersionUpdate(int,android.content.Context) -> c
+    void setBaseLoaded(android.content.Context,boolean) -> a
+    boolean isBaseLoadedFromAssets(android.content.Context) -> g
+    void setBaseLoadedFromAssets(android.content.Context,boolean) -> b
+    boolean isCutOn(android.content.Context) -> h
+    void setCutByTracks(android.content.Context,boolean) -> c
+    boolean isImagesOn(android.content.Context) -> i
+    void setImagesOn(android.content.Context,boolean) -> d
+    java.lang.String getMyLocale(android.content.Context) -> j
+    void setMyLocale(java.lang.String,android.content.Context) -> b
+    boolean isSaveCurrentOn(android.content.Context) -> k
+    void setSaveCurrent(android.content.Context,boolean) -> e
+    boolean isPlayBackOn(android.content.Context) -> l
+    void setPlayBack(android.content.Context,boolean) -> f
+    boolean isSaveAllOn(android.content.Context) -> m
+    void setSaveAll(android.content.Context,boolean) -> g
+    boolean isShowHelpLayout(android.content.Context) -> n
+    void setShowHelpLayout(android.content.Context,boolean) -> h
+com.fallen.streamgetter.XMLLastFMHandler -> com.fallen.streamgetter.cm:
+    android.graphics.Bitmap trackImage -> a
+    java.lang.String tagValue -> b
+    java.lang.String mLocalName -> c
+    java.lang.String mQName -> d
+    java.lang.String attributes -> e
+    java.lang.String resultURLString -> f
+    java.lang.String artistTagValue -> g
+    java.lang.String artistToFind -> h
+    boolean firstAttempt -> i
+    void startElement(java.lang.String,java.lang.String,java.lang.String,org.xml.sax.Attributes) -> startElement
+    void characters(char[],int,int) -> characters
+    void endElement(java.lang.String,java.lang.String,java.lang.String) -> endElement
+    android.graphics.Bitmap getResult() -> a

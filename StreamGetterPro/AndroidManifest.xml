@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fallen.streamgetterfree"
+    android:installLocation="auto"
+    android:versionCode="11"
+    android:versionName="3.1.1" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="13" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    
+
+    <application
+        android:icon="@drawable/explogo3"
+        android:label="@string/app_name" >
+        <activity
+            android:name="com.fallen.streamgetter.GetRadioActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fallen.streamgetter.SGPlayer"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+
+        <service
+            android:name="com.fallen.streamgetter.MainService"
+            android:enabled="true" >
+        </service>
+        <service
+            android:name="com.fallen.streamgetter.PlayerService"
+            android:enabled="true" >
+        </service>
+
+        <receiver
+            android:name="com.fallen.streamgetter.CallReceiver"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" >
+                </action>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest> <!-- android:launchMode="singleInstance" -->

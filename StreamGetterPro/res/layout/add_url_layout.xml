@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BB000000"
+    android:orientation="vertical" >
+	
+    <TextView 
+         android:text="@string/newStationNameText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/newStationName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </EditText>
+    <TextView 
+       android:text="@string/urlStationText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:hint="http://radio.stream.com:8000/radio.mp3"
+        android:id="@+id/newStationUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </EditText>
+
+    <Button
+        android:id="@+id/addConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="addConfirm"
+        android:text="OK" />
+
+</LinearLayout>

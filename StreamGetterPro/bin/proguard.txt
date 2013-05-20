@@ -1,0 +1,60 @@
+# view AndroidManifest.xml #generated:48
+-keep class com.fallen.streamgetter.CallReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:23
+-keep class com.fallen.streamgetter.GetRadioActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:39
+-keep class com.fallen.streamgetter.MainService { <init>(...); }
+
+# view AndroidManifest.xml #generated:43
+-keep class com.fallen.streamgetter.PlayerService { <init>(...); }
+
+# view AndroidManifest.xml #generated:33
+-keep class com.fallen.streamgetter.SGPlayer { <init>(...); }
+
+# onClick res/layout/add_url_layout.xml #generated:28
+-keepclassmembers class * { *** addConfirm(...); }
+
+# onClick res/layout/all_in_line.xml #generated:262
+-keepclassmembers class * { *** addStation(...); }
+
+# onClick res/layout/all_in_line.xml #generated:147
+# onClick res/layout/stat_layout.xml #generated:105
+-keepclassmembers class * { *** addToFav(...); }
+
+# onClick res/layout/sgplayer.xml #generated:90
+-keepclassmembers class * { *** next(...); }
+
+# onClick res/layout/all_in_line.xml #generated:18
+-keepclassmembers class * { *** optionsClicked(...); }
+
+# onClick res/layout/sgplayer.xml #generated:84
+-keepclassmembers class * { *** prev(...); }
+
+# onClick res/layout/all_in_line.xml #generated:248
+-keepclassmembers class * { *** rateMe(...); }
+
+# onClick res/layout/all_in_line.xml #generated:241
+-keepclassmembers class * { *** setSaveCount(...); }
+
+# onClick res/layout/all_in_line.xml #generated:255
+-keepclassmembers class * { *** showDemoAgain(...); }
+
+# onClick res/layout/all_in_line.xml #generated:24
+-keepclassmembers class * { *** statusClicked(...); }
+
+# onClick res/layout/all_in_line.xml #generated:202
+# onClick res/layout/sgplayer.xml #generated:96
+-keepclassmembers class * { *** stop(...); }
+
+# onClick res/layout/all_in_line.xml #generated:30
+-keepclassmembers class * { *** topClicked(...); }
+
+# onClick res/layout/all_in_line.xml #generated:36
+-keepclassmembers class * { *** tracksClicked(...); }
+
+# onClick res/layout/all_in_line.xml #generated:234
+# onClick res/layout/newoptions.xml #generated:28
+-keepclassmembers class * { *** updateLib(...); }
+
